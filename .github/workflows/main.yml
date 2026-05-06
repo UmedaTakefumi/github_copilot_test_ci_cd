@@ -1,1 +1,7 @@
+name: Python Unit Tests with Aggregation
+
+on:
+  schedule:
+    - cron: '*/1 * * * *' # 1分ごとに実行
+
 
