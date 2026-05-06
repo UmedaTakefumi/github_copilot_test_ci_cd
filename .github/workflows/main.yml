@@ -19,5 +19,7 @@ jobs:
     - run: date
     - run: uname -a
     - run: pwd
+    - run: ls -lasF
+    - run: tree
     - run: python3 python/run.py
 
