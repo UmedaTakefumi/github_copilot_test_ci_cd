@@ -8,6 +8,8 @@ class TestCalc(unittest.TestCase):
   def setUp(self):
     """ セットアップメソッド """
     sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+
+    from Calc.calc import Calc
     self.calc = Calc()
 
   def tearDown(self):
