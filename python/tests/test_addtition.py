@@ -43,6 +43,9 @@ if __name__ == "__main__":
   #print(result)
   
   unittest.main(
-    testRunner=xmlrunner.XMLTestRunner(output='reports')
+    testRunner=xmlrunner.XMLTestRunner(
+      output='reports',
+      filename_template='test_calc.xml'
+    )
   )
   
