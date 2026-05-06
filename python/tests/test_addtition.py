@@ -7,6 +7,7 @@ class TestCalc(unittest.TestCase):
   """ Calcクラスのテストケース """
   def setUp(self):
     """ セットアップメソッド """
+    sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
     self.calc = Calc()
 
   def tearDown(self):
