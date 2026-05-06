@@ -76,6 +76,12 @@ jobs:
         name: test-results-${{ matrix.python-version }}
         path: test.xml
 
+    - name: Publish Test Report
+      users: mikepenz/action-junit-report@v2
+      if: always()
+      with:
+        report_paths: 'test.xml'
+
 #    # https://github.com/EnricoMi/publish-unit-test-result-action
 #    - name: Publish test results to GitHub
 #      if: always()
