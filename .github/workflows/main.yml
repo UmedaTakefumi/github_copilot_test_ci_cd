@@ -1,0 +1,41 @@
+name: Python Unit Tests with Aggregation
+
+on:
+  ## https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows
+  schedule:
+    - cron: "0,5,10,15,20,25,30,35,40,45,50,55 * * * *" #
+      timezone: "Asia/Tokyo"
+  push:
+    branches: [ "master" ] #
+  pull_request:
+    branches: [ "master" ] #
+
+jobs:
+  test:
+    ## https://docs.github.com/en/actions/reference/runners/github-hosted-runners
+    runs-on: ubuntu-24.04
+    strategy:
+      matrix:
+        python-version: ['3.9', '3.10', '3.11']
+
+    steps:
+    - run: sudo apt-get -y install uuid
+    - run: uuid
+    - run: echo "Hello world!"
+    - run: date
+    - run: uname -a
+    - run: pwd
+
+    - uses: actions/checkout@v3
+
+    - run: ls -lasF
+    - run: tree
+
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - run: python3 python/run.py
+    - run: python3 python/tests/test_addtition.py
+
