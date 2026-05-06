@@ -60,5 +60,5 @@ jobs:
       run: tree
 
     - name: 後処理/ls
-      run: ls -lasF
+      run: find . -type f 
 
