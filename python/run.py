@@ -7,6 +7,14 @@ import sys
 from Calc.calc import Calc
 
 calc01 = Calc()
+result01 = calc01.simple_addition(0,1)
+print(result01)
+
+calc01 = Calc()
+result01 = calc01.simple_addition(1,1)
+print(result01)
+
+calc01 = Calc()
 result01 = calc01.simple_addition(1,2)
 print(result01)
 
