@@ -56,3 +56,9 @@ jobs:
     - run: python3 python/run.py
     - run: python3 python/tests/test_addtition.py -v
 
+    - name: 後処理/tree
+      run: tree
+
+    - name: 後処理/ls
+      run: ls -lasF
+
