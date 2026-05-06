@@ -16,4 +16,6 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
     - run: echo "Hello world!"
+    - run: date
+    - run: uname -a
 
