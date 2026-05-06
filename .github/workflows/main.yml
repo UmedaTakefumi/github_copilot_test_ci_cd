@@ -23,10 +23,12 @@ jobs:
     - run: date
     - run: uname -a
     - run: pwd
+
+    - uses: actions/checkout@v3
+
     - run: ls -lasF
     - run: tree
 
-    - uses: actions/checkout@v3
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v4
       with:
