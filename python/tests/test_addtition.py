@@ -1,7 +1,7 @@
 import sys
 import os
 import unittest
-
+import xmlrunner
 
 class TestCalc(unittest.TestCase):
   """ Calcクラスのテストケース """
@@ -42,5 +42,7 @@ if __name__ == "__main__":
   #result = hoge.simple_addition(2,3)
   #print(result)
   
-  unittest.main()
+  unittest.main(
+    testRunner=xmlrunner.XMLTestRunner(output='reports')
+  )
   
