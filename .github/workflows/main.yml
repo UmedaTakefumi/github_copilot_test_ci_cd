@@ -68,13 +68,13 @@ jobs:
     - name: 後処理/find
       run: find . -type f -not -path './.git/*'
 
-#    - name: Upload test results
-#      if: always()
-#      uses: actions/upload-artifact@v3
-#      with:
-#        name: test-results-${{ matrix.python-version }}
-#        path: test-results.xml
-#
+    - name: Upload test results
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: test-results-${{ matrix.python-version }}
+        path: test.xml
+
 #    - name: Publish test results to GitHub
 #      if: always()
 #      uses: EnricoMi/publish-unit-test-result-action@v2
