@@ -42,9 +42,11 @@ if __name__ == "__main__":
   #result = hoge.simple_addition(2,3)
   #print(result)
   
-  unittest.main(
-    testRunner=xmlrunner.XMLTestRunner(
-      output='reports'
-    )
-  )
-  
+#  unittest.main(
+#    testRunner=xmlrunner.XMLTestRunner(
+#      output='reports'
+#    )
+#  )
+#
+  unittest.main()
+
