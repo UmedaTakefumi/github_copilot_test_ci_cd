@@ -77,7 +77,7 @@ jobs:
         path: test.xml
 
     - name: Publish Test Report
-      users: mikepenz/action-junit-report@v2
+      uses: mikepenz/action-junit-report@v2
       if: always()
       with:
         report_paths: 'test.xml'
