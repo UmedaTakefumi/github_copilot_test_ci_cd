@@ -68,9 +68,10 @@ jobs:
     - name: 後処理/find
       run: find . -type f -not -path './.git/*'
 
+    # https://github.com/actions/upload-artifact
     - name: Upload test results
       if: always()
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v7
       with:
         name: test-results-${{ matrix.python-version }}
         path: test.xml
