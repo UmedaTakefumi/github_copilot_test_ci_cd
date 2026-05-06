@@ -62,3 +62,17 @@ jobs:
     - name: 後処理/find
       run: find ../ -type f -not -path '../github_copilot_test_ci_cd/.git/*'
 
+    - name: Upload test results
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: test-results-${{ matrix.python-version }}
+        path: test-results.xml
+
+    - name: Publish test results to GitHub
+      if: always()
+      uses: EnricoMi/publish-unit-test-result-action@v2
+      with:
+        files: test-results.xml
+        check_name: Test Results (${{ matrix.python-version }})
+
