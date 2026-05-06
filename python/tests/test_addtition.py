@@ -1,27 +1,39 @@
 import sys
 import os
+import unittest
 
-print("---------------------------")
-for temp in sys.path:
-  print(temp)
-print("---------------------------")
-sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
-for temp in sys.path:
-  print(temp)
-print("---------------------------")
+#print("---------------------------")
+#for temp in sys.path:
+#  print(temp)
+#print("---------------------------")
+#sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+#for temp in sys.path:
+#  print(temp)
+#print("---------------------------")
+#
+#
+#print(os.getcwd())
+#os.chdir('python')
+#print(os.getcwd())
+#print("---------------------------")
+#
+#from Calc.calc import Calc
+#hoge = Calc()
+#result = hoge.simple_addition(2,3)
+#print(result)
 
+class TestCalc(unittest.TestCase):
+  """ Calcクラスのテストケース """
+  def setUp(self):
+    """ セットアップメソッド """
+    self.calc = Calc()
 
-print(os.getcwd())
-os.chdir('python')
-print(os.getcwd())
-print("---------------------------")
+  def tearDown(self):
+    """ クリーンアップメソッド """
+    pass
 
-from Calc.calc import Calc
-hoge = Calc()
-result = hoge.simple_addition(2,3)
-print(result)
-
-
-
-
+  def test_add_positive_num(self):
+    """ 加法のテスト """
+    result self.calc.simple_addition(2,3)
+    self.assertEqual(result, 5)
 
