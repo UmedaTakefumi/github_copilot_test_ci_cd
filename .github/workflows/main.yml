@@ -62,6 +62,12 @@ jobs:
     - name: 後処理/find
       run: find . -type f -not -path './.git/*'
 
+    - name: 後処理/rename
+      run: mv $(find . -type f ./python/reports/) test.xml
+
+    - name: 後処理/find
+      run: find . -type f -not -path './.git/*'
+
 #    - name: Upload test results
 #      if: always()
 #      uses: actions/upload-artifact@v3
