@@ -19,5 +19,5 @@ jobs:
     - run: date
     - run: uname -a
     - run: pwd
-    - run: python3 run.py
+    - run: python3 python/run.py
 
