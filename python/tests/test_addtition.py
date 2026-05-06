@@ -1,7 +1,6 @@
 import sys
 import os
 import unittest
-import xmlrunner
 
 class TestCalc(unittest.TestCase):
   """ Calcクラスのテストケース """
