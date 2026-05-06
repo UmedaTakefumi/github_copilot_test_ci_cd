@@ -63,7 +63,7 @@ jobs:
       run: find . -type f -not -path './.git/*'
 
     - name: 後処理/rename
-      run: mv $(find . -type f ./python/reports/) test.xml
+      run: mv $(find ./python/reports/ -type f) test.xml
 
     - name: 後処理/find
       run: find . -type f -not -path './.git/*'
