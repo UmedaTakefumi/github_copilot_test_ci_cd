@@ -76,11 +76,11 @@ jobs:
         name: test-results-${{ matrix.python-version }}
         path: test.xml
 
-    # https://github.com/EnricoMi/publish-unit-test-result-action
-    - name: Publish test results to GitHub
-      if: always()
-      uses: EnricoMi/publish-unit-test-result-action@v2
-      with:
-        files: test.xml
+#    # https://github.com/EnricoMi/publish-unit-test-result-action
+#    - name: Publish test results to GitHub
+#      if: always()
+#      uses: EnricoMi/publish-unit-test-result-action@v2
+#      with:
+#        files: test.xml
 #        check_name: Test Results (${{ matrix.python-version }})
 
