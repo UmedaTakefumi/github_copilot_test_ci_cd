@@ -50,8 +50,11 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
 
-    - run: python3 python/run.py
-    - run: python3 python/tests/test_addtition.py -v
+    - name: Run a run.py
+      run: python3 python/run.py
+
+    - name: ☆☆ unitest ☆☆
+      run: python3 python/tests/test_addtition.py -v
 
     - name: 後処理/tree
       run: tree
