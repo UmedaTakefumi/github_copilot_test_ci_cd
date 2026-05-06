@@ -34,6 +34,6 @@ class TestCalc(unittest.TestCase):
 
   def test_add_positive_num(self):
     """ 加法のテスト """
-    result self.calc.simple_addition(2,3)
+    result = self.calc.simple_addition(2,3)
     self.assertEqual(result, 5)
 
