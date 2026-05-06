@@ -60,5 +60,5 @@ jobs:
       run: tree
 
     - name: 後処理/ls
-      run: find . -type f 
+      run: find . -type f -not -path '.git/*'
 
