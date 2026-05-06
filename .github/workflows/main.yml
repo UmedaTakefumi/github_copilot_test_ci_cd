@@ -2,8 +2,12 @@ name: Python Unit Tests with Aggregation
 
 on:
   ## https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows
-  schedule:
-    - cron: '*/1 * * * *' # 1分ごとに実行
+  #schedule:
+  #  - cron: '*/1 * * * *' # 1分ごとに実行
+  push:
+    branches: [ "master" ] #
+  pull_request:
+    branches: [ "master" ] #
 
 jobs:
   test:
