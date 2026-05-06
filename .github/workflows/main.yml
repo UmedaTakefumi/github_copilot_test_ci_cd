@@ -62,26 +62,26 @@ jobs:
     - name: 後処理/find
       run: find . -type f -not -path './.git/*'
 
-    - name: 後処理/rename
-      run: mv $(find ./python/reports/ -type f) test.xml
+#    - name: 後処理/rename
+#      run: mv $(find ./python/reports/ -type f) test.xml
+#
+#    - name: 後処理/find
+#      run: find . -type f -not -path './.git/*'
 
-    - name: 後処理/find
-      run: find . -type f -not -path './.git/*'
-
-    # https://github.com/actions/upload-artifact
-    - name: Upload test results
-      if: always()
-      uses: actions/upload-artifact@v7
-      with:
-        name: test-results-${{ matrix.python-version }}
-        path: test.xml
-
-    - name: Publish Test Report
-      uses: mikepenz/action-junit-report@v6
-      if: always()
-      with:
-        report_paths: 'test.xml'
-
+#    # https://github.com/actions/upload-artifact
+#    - name: Upload test results
+#      if: always()
+#      uses: actions/upload-artifact@v7
+#      with:
+#        name: test-results-${{ matrix.python-version }}
+#        path: test.xml
+#
+#    - name: Publish Test Report
+#      uses: mikepenz/action-junit-report@v6
+#      if: always()
+#      with:
+#        report_paths: 'test.xml'
+#
 #    # https://github.com/EnricoMi/publish-unit-test-result-action
 #    - name: Publish test results to GitHub
 #      if: always()
