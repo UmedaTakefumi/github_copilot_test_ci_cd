@@ -19,17 +19,31 @@ jobs:
         python-version: ['3.9', '3.10', '3.11']
 
     steps:
-    - run: sudo apt-get -y install uuid
-    - run: uuid
+    - name: 準備/install uuid
+      run: sudo apt-get -y install uuid
+
+    - name: 準備/UUIDを発行
+      run: uuid
+
+    - name: 準備/テストメッセージ出力
     - run: echo "Hello world!"
-    - run: date
-    - run: uname -a
-    - run: pwd
+
+    - name: 準備/時間表示
+      run: date
+
+    - name: 準備/uname
+      run: uname -a
+
+    - name: 準備/pwd
+      run: pwd
 
     - uses: actions/checkout@v3
 
-    - run: ls -lasF
-    - run: tree
+    - name: 準備/ls
+      run: ls -lasF
+
+    - name: 準備/tree
+      run: tree
 
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v4
