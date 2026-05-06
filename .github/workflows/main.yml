@@ -19,6 +19,7 @@ jobs:
         python-version: ['3.9', '3.10', '3.11']
 
     steps:
+    - run: sudo apt-get -y install uuid
     - run: uuid
     - run: echo "Hello world!"
     - run: date
