@@ -51,5 +51,5 @@ jobs:
         python-version: ${{ matrix.python-version }}
 
     - run: python3 python/run.py
-    - run: python3 python/tests/test_addtition.py
+    - run: python3 python/tests/test_addtition.py -v
 
