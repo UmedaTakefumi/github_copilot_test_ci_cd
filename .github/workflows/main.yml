@@ -60,5 +60,5 @@ jobs:
       run: tree
 
     - name: 後処理/find
-      run: find ../ -type f -not -path './.git/*'
+      run: find ../ -type f -not -path '../github_copilot_test_ci_cd/.git/*'
 
