@@ -1,4 +1,9 @@
 class Calc:
+
+  #def __init__(self, a, b):
+    #self.a = a
+    #self.b = b
+
   def simple_addition(self, a, b):
     """ 単純な加法 / Addition """
     return a + b
