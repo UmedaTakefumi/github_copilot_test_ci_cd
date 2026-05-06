@@ -17,4 +17,3 @@ print(result02)
 calc03 = Calc()
 result03 = calc03.simple_addition(3,4)
 print(result03)
-
