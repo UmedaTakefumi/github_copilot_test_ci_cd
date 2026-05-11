@@ -62,3 +62,6 @@ if __name__ == "__main__":
 
   unittest.main()
 
+
+## https://kuma35-memo.readthedocs.io/ja/latest/unittest-logging.html
+## https://zenn.dev/recustomer/articles/ae98fc098be22f
