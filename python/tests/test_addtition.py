@@ -18,7 +18,6 @@ class TestCalc(unittest.TestCase):
     from Calc.calc import Calc
     self.calc     = Calc()
     self.uuidgen  = uuid.uuid4()
-    self.funcname = inspect.currentframe().f_code.co_name
 
   def tearDown(self):
     """ テストメソッド実行後に呼び出されるメソッド """
@@ -30,6 +29,7 @@ class TestCalc(unittest.TestCase):
 
   def test_add_positive_num_SerialNum_4c081197(self):
     """ 加法テスト """
+    self.funcname = inspect.currentframe().f_code.co_name
     print(f"Debug-Print: {self.uuidgen}, {self.funcname}")
     result = self.calc.simple_addition(0,1)
     self.assertEqual(result, 1)
