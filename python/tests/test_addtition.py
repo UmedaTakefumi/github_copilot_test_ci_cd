@@ -23,6 +23,8 @@ class TestCalc(unittest.TestCase):
 
   def tearDown(self):
     """ テストメソッド実行後に呼び出されるメソッド """
+
+    ## see also: https://qiita.com/dokeita/items/521510ddd0e0e2317d7b
     output = sys.stdout.getvalue()
     sys.stdout = self.original_stdout
     print(output)
