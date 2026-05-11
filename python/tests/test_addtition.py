@@ -57,6 +57,7 @@ class TestCalc(unittest.TestCase):
     result = self.calc.simple_addition(3,4)
     self.assertEqual(result, 7)
 
+
 if __name__ == "__main__":
 
   unittest.main()
