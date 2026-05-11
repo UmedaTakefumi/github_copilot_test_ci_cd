@@ -37,18 +37,17 @@ jobs:
     - name: 準備/pwd
       run: pwd
 
-    - uses: actions/checkout@v6
+    - name: 準備/Set up Python ${{ matrix.python-version }}
+      uses: actions/checkout@v6
+      uses: actions/setup-python@v6
+      with:
+        python-version: ${{ matrix.python-version }}
 
     - name: 準備/ls
       run: ls -lasF
 
     - name: 準備/tree
       run: tree
-
-    - name: 準備/Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v6
-      with:
-        python-version: ${{ matrix.python-version }}
 
     - name: Run a run.py
       run: python3 python/run.py
