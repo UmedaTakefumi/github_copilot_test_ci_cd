@@ -37,8 +37,8 @@ jobs:
     - name: 準備/pwd
       run: pwd
 
+    - uses: actions/checkout@v6
     - name: 準備/Set up Python ${{ matrix.python-version }}
-      uses: actions/checkout@v6
       uses: actions/setup-python@v6
       with:
         python-version: ${{ matrix.python-version }}
