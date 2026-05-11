@@ -28,7 +28,7 @@ class TestCalc(unittest.TestCase):
     print(output)
 
   def test_add_positive_num_SerialNum_4c081197(self):
-    """ 加法テスト """
+    """ 加法テスト \n"""
 
     ## see also: https://qiita.com/megmogmog1965/items/0b4ea3d58e34f1854158
     self.funcname = inspect.currentframe().f_code.co_name
