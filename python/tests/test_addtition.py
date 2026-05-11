@@ -16,7 +16,7 @@ class TestCalc(unittest.TestCase):
     from Calc.calc import Calc
     self.calc    = Calc()
     self.counter = int(1);
-    self.uuidgen = uuid.uuid5()
+    self.uuidgen = uuid.uuid4()
 
   def tearDown(self):
     """ テストメソッド実行後に呼び出されるメソッド """
