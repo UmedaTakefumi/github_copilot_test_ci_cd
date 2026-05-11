@@ -1,4 +1,4 @@
-name: Python Unit Tests with Aggregation (import hogehoge)
+name: Python Unit Tests with Aggregation (import pytest)
 
 on:
   ## https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows
