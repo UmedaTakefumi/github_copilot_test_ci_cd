@@ -37,8 +37,8 @@ jobs:
     - name: 準備/pwd
       run: pwd
       
-    - name: 準備/install uuid
-      run: sudo apt-cache search blender
+    - name: 準備/install blender
+      run: sudo apt-get -y install blender blender-data blender-doc blender-ogrexml-1.9 blender-ogrexml-next
 
 #    ## https://github.com/actions/checkout
 #    - uses: actions/checkout@v6
