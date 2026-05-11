@@ -33,13 +33,15 @@ class TestCalc(unittest.TestCase):
     ## see also: https://qiita.com/megmogmog1965/items/0b4ea3d58e34f1854158
     self.funcname = inspect.currentframe().f_code.co_name
 
+    ## デバック用のPrint用途で利用する
     print(f"Debug-Print: {self.uuidgen}, {self.funcname}")
+
     result = self.calc.simple_addition(0,1)
     self.assertEqual(result, 1)
 
   def test_add_positive_num_SerialNum_829f1d73(self):
     """ 加法テスト """
-    #""" 0-1 加法のテスト """ <= 連番つけると不便
+    #""" 0-1 加法のテスト """ <= 連番つけると不便, 連番だめ, メソッド名にUUIDを付与する
     # print(f"加法テスト: {self.uuidgen}")
     result = self.calc.simple_addition(1,2)
     self.assertEqual(result, 3)
