@@ -16,14 +16,14 @@ class TestCalc(unittest.TestCase):
     self.counter = int(1);
 
   def tearDown(self):
-    """ クリーンアップメソッド """
+    """ テストメソッド実行後に呼び出されるメソッド """
     output = sys.stdout.getvalue()
     sys.stdout = self.original_stdout
     print(output)
 
   def test_add_positive_num(self):
     """ 加法のテスト """
-    print("hoge fuga")
+    print(f"hoge fuga: {self.counter}")
     result = self.calc.simple_addition(0,1)
     self.assertEqual(result, 1)
 
