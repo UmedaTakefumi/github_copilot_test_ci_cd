@@ -32,17 +32,19 @@ class TestCalc(unittest.TestCase):
 
   def test_add_positive_num_0_1(self):
     """ 0-1 加法のテスト """
-    print(f"hoge fuga: {self.counter}")
+    print(f"加法テスト: {self.uuidgen}")
     result = self.calc.simple_addition(1,2)
     self.assertEqual(result, 3)
 
   def test_add_positive_num_0_2(self):
     """ 0-2 加法のテスト """
+    print(f"加法テスト: {self.uuidgen}")
     result = self.calc.simple_addition(2,3)
     self.assertEqual(result, 5)
 
   def test_add_positive_num_0_3(self):
     """ 0-3 加法のテスト """
+    print(f"加法テスト: {self.uuidgen}")
     result = self.calc.simple_addition(3,4)
     self.assertEqual(result, 7)
 
