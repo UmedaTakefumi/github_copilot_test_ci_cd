@@ -44,6 +44,8 @@ jobs:
       run: tree
 
     - uses: actions/checkout@v6
+      with:
+        repository: ''
 
     - name: 準備/Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v6
