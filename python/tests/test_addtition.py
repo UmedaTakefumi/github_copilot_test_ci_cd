@@ -9,11 +9,17 @@ class TestCalc(unittest.TestCase):
     sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
     from Calc.calc import Calc
-    self.calc = Calc()
+    self.calc    = Calc()
+    self.counter = int(1);
 
   def tearDown(self):
     """ クリーンアップメソッド """
     pass
+
+  def test_add_positive_num(self):
+    """ self.counter 加法のテスト """
+    result = self.calc.simple_addition(0,1)
+    self.assertEqual(result, 1)
 
   def test_add_positive_num_0_1(self):
     """ 0-1 加法のテスト """
