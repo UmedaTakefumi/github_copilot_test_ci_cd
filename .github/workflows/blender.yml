@@ -1,4 +1,4 @@
-name: Blender Test
+name: (import unittest) Python Unit Tests with Aggregation
 
 on:
   ## https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows
@@ -36,34 +36,31 @@ jobs:
 
     - name: 準備/pwd
       run: pwd
-      
-    - name: 準備/install uuid
-      run: sudo apt-cache search blender
 
-#    ## https://github.com/actions/checkout
-#    - uses: actions/checkout@v6
-#
-#    ## https://github.com/actions/setup-python
-#    - name: 準備/Set up Python ${{ matrix.python-version }}
-#      uses: actions/setup-python@v6
-#      with:
-#        python-version: ${{ matrix.python-version }}
-#
-#    - name: 準備/ls
-#      run: ls -lasF
-#
-#    - name: 準備/tree
-#      run: tree
-#
-#    - name: Run a run.py
-#      run: python3 python/run.py
-#
-#    - name: ☆☆ unitest ☆☆
-#      run: python3 python/tests/test_addtition.py -v
-#
-#    - name: 後処理/tree
-#      run: tree
-#
-#    - name: 後処理/find
-#      run: find . -type f -not -path './.git/*'
-#
+    ## https://github.com/actions/checkout
+    - uses: actions/checkout@v6
+
+    ## https://github.com/actions/setup-python
+    - name: 準備/Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v6
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: 準備/ls
+      run: ls -lasF
+
+    - name: 準備/tree
+      run: tree
+
+    - name: Run a run.py
+      run: python3 python/run.py
+
+    - name: ☆☆ unitest ☆☆
+      run: python3 python/tests/test_addtition.py -v
+
+    - name: 後処理/tree
+      run: tree
+
+    - name: 後処理/find
+      run: find . -type f -not -path './.git/*'
+
