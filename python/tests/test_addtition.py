@@ -26,7 +26,7 @@ class TestCalc(unittest.TestCase):
 
   def test_add_positive_num(self):
     """ 加法のテスト """
-    print(f"加法テスト: {self.uuidgen}").rstrip('\n')
+    print(f"加法テスト: {self.uuidgen}")
     result = self.calc.simple_addition(0,1)
     self.assertEqual(result, 1)
 
