@@ -5,8 +5,6 @@ import unittest
 
 class TestCalc(unittest.TestCase):
   """ Calcクラスのテストケース """
-  def hoge(self):
-    self.counter = ""
 
   def setUp(self):
     """ テストメソッド実行前に呼び出されるメソッド """
@@ -18,7 +16,6 @@ class TestCalc(unittest.TestCase):
 
     from Calc.calc import Calc
     self.calc    = Calc()
-    self.counter = int(1);
     self.uuidgen = uuid.uuid4()
 
   def tearDown(self):
