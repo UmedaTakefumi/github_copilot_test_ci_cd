@@ -1,10 +1,12 @@
 import sys, os, io
+import uuid
 import unittest
+
 
 class TestCalc(unittest.TestCase):
   """ Calcクラスのテストケース """
   def setUp(self):
-    """ セットアップメソッド """
+    """ テストメソッド実行前に呼び出されるメソッド """
     sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
     ## see also: https://qiita.com/dokeita/items/521510ddd0e0e2317d7b
@@ -14,6 +16,7 @@ class TestCalc(unittest.TestCase):
     from Calc.calc import Calc
     self.calc    = Calc()
     self.counter = int(1);
+    self.uuidgen = uuid.uuid5()
 
   def tearDown(self):
     """ テストメソッド実行後に呼び出されるメソッド """
@@ -23,17 +26,15 @@ class TestCalc(unittest.TestCase):
 
   def test_add_positive_num(self):
     """ 加法のテスト """
-    print(f"hoge fuga: {self.counter}")
+    print(f"加法テスト: {self.uuidgen}").rstrip('\n')
     result = self.calc.simple_addition(0,1)
     self.assertEqual(result, 1)
-    self.counter+=1
 
   def test_add_positive_num_0_1(self):
     """ 0-1 加法のテスト """
     print(f"hoge fuga: {self.counter}")
     result = self.calc.simple_addition(1,2)
     self.assertEqual(result, 3)
-    self.counter+=1
 
   def test_add_positive_num_0_2(self):
     """ 0-2 加法のテスト """
