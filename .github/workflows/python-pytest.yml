@@ -43,25 +43,24 @@ jobs:
     - name: 準備/tree
       run: tree
 
-#    - uses: actions/checkout@v6
-#      with:
-#        repository: 'https://github.com/UmedaTakefumi/github_copilot_test_ci_cd.git'
-#
-#    - name: 準備/Set up Python ${{ matrix.python-version }}
-#      uses: actions/setup-python@v6
-#      with:
-#        python-version: ${{ matrix.python-version }}
-#
-#    - name: Run a run.py
-#      run: python3 python/run.py
-#
-#    - name: ☆☆ unitest ☆☆
-#      run: python3 python/tests/test_addtition.py -v
-#
-#    - name: 後処理/tree
-#      run: tree
-#
-#    - name: 後処理/find
-#      run: find . -type f -not -path './.git/*'
-#
-#
+    - uses: actions/checkout@v6
+      with:
+        repository: 'https://github.com/UmedaTakefumi/github_copilot_test_ci_cd.git'
+
+    - name: 準備/Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v6
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Run a run.py
+      run: python3 python/run.py
+
+    - name: ☆☆ unitest ☆☆
+      run: python3 python/tests/test_addtition.py -v
+
+    - name: 後処理/tree
+      run: tree
+
+    - name: 後処理/find
+      run: find . -type f -not -path './.git/*'
+
