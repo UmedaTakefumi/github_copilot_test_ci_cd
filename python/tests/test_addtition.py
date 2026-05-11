@@ -29,7 +29,10 @@ class TestCalc(unittest.TestCase):
 
   def test_add_positive_num_SerialNum_4c081197(self):
     """ 加法テスト """
+
+    ## see also: https://qiita.com/megmogmog1965/items/0b4ea3d58e34f1854158
     self.funcname = inspect.currentframe().f_code.co_name
+
     print(f"Debug-Print: {self.uuidgen}, {self.funcname}")
     result = self.calc.simple_addition(0,1)
     self.assertEqual(result, 1)
