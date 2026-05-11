@@ -26,11 +26,14 @@ class TestCalc(unittest.TestCase):
     print(f"hoge fuga: {self.counter}")
     result = self.calc.simple_addition(0,1)
     self.assertEqual(result, 1)
+    self.counter+=1
 
   def test_add_positive_num_0_1(self):
     """ 0-1 加法のテスト """
+    print(f"hoge fuga: {self.counter}")
     result = self.calc.simple_addition(1,2)
     self.assertEqual(result, 3)
+    self.counter+=1
 
   def test_add_positive_num_0_2(self):
     """ 0-2 加法のテスト """
