@@ -3,7 +3,6 @@ import uuid
 import inspect
 import unittest
 
-
 class TestCalc(unittest.TestCase):
   """ Calcクラスのテストケース """
 
