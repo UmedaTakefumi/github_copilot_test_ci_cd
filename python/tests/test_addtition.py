@@ -23,6 +23,7 @@ class TestCalc(unittest.TestCase):
 
   def test_add_positive_num(self):
     """ 加法のテスト """
+    print("hoge fuga")
     result = self.calc.simple_addition(0,1)
     self.assertEqual(result, 1)
 
