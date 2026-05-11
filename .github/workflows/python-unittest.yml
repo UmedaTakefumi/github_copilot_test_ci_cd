@@ -37,7 +37,10 @@ jobs:
     - name: 準備/pwd
       run: pwd
 
+    ## https://github.com/actions/checkout
     - uses: actions/checkout@v6
+
+    ## https://github.com/actions/setup-python
     - name: 準備/Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v6
       with:

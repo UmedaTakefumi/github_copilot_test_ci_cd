@@ -43,8 +43,12 @@ jobs:
     - name: 準備/tree
       run: tree
 
+    ## https://github.com/actions/checkout
     - uses: actions/checkout@v6
+
     - name: 準備/Set up Python ${{ matrix.python-version }}
+
+      ## https://github.com/actions/setup-python
       uses: actions/setup-python@v6
       with:
         python-version: ${{ matrix.python-version }}
