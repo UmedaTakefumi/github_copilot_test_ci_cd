@@ -28,25 +28,26 @@ class TestCalc(unittest.TestCase):
     print(output)
 
   def test_add_positive_num_SerialNum_4c081197(self):
-    """ 加法のテスト """
+    """ 加法テスト """
     # print(f"加法テスト: {self.uuidgen}")
     result = self.calc.simple_addition(0,1)
     self.assertEqual(result, 1)
 
   def test_add_positive_num_SerialNum_829f1d73(self):
-    """ 0-1 加法のテスト """
+    """ 加法テスト """
+    #""" 0-1 加法のテスト """ <= 連番をつけても上から順番に実行されるわけではなくメソッド名順に実行されるので連番意味ない
     # print(f"加法テスト: {self.uuidgen}")
     result = self.calc.simple_addition(1,2)
     self.assertEqual(result, 3)
 
-  def test_add_positive_num_0_2(self):
-    """ 0-2 加法のテスト """
+  def test_add_positive_num_SerialNum_bed917bc(self):
+    """ 加法テスト """
     # print(f"加法テスト: {self.uuidgen}")
     result = self.calc.simple_addition(2,3)
     self.assertEqual(result, 5)
 
-  def test_add_positive_num_0_3(self):
-    """ 0-3 加法のテスト """
+  def test_add_positive_num_SerialNum_f87d19e4(self):
+    """ 加法テスト """
     # print(f"加法テスト: {self.uuidgen}")
     result = self.calc.simple_addition(3,4)
     self.assertEqual(result, 7)
