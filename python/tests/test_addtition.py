@@ -28,7 +28,7 @@ class TestCalc(unittest.TestCase):
 
   def test_add_positive_num_SerialNum_4c081197(self):
     """ 加法テスト """
-    # print(f"加法テスト: {self.uuidgen}")
+    print(f"Debug-Print: {self.uuidgen}, {__func__}")
     result = self.calc.simple_addition(0,1)
     self.assertEqual(result, 1)
 
