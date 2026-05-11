@@ -9,7 +9,7 @@ class TestCalc(unittest.TestCase):
 
     ## see also: https://qiita.com/dokeita/items/521510ddd0e0e2317d7b
     self.original_stdout = sys.stdout
-    sys.stdout = io.StrringIO()
+    sys.stdout = io.StringIO()
 
     from Calc.calc import Calc
     self.calc    = Calc()
