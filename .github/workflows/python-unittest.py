@@ -37,7 +37,7 @@ jobs:
     - name: 準備/pwd
       run: pwd
 
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v6
 
     - name: 準備/ls
       run: ls -lasF
