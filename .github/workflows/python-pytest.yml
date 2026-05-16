@@ -57,7 +57,7 @@ jobs:
       run: python3 python/run.py
 
     - name: ☆☆ unitest ☆☆
-      run: python3 python/tests/test_addtition.py -v
+      run: python3 python/tests/test_addtition_unitttest.py -v
 
     - name: 後処理/tree
       run: tree
