@@ -37,9 +37,9 @@ jobs:
     - name: 準備/pwd
       run: pwd
       
-    - name: 準備/install blender
-      run: sudo apt-get -y install blender blender-data blender-doc
-
+#    - name: 準備/install blender
+#      run: sudo apt-get -y install blender blender-data blender-doc
+#
 #    ## https://github.com/actions/checkout
 #    - uses: actions/checkout@v6
 #
